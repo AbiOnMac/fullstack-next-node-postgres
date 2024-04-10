@@ -12,6 +12,9 @@ RUN npx prisma generate
 
 COPY . .
 
+COPY ./start.sh /start.sh
+
 EXPOSE 4000
 
-CMD ["node", "index.js"]
+# CMD ["node", "index.js"]
+RUN chmod +x start.sh
